@@ -4,22 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projetos Sociais | Associação Semente de Empoderamento</title>
+  <link rel="stylesheet" href="css/projetos.css">
 </head>
 <body>
+
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="projetos.html">Projetos</a></li>
-        <li><a href="cadastro.html">Cadastro</a></li>
-      </ul>
-    </nav>
+    <div class="header-content">
+        <div class="logo">
+            <a href="index.html">Associação Semente de Empoderamento</a>
+        </div>
+        
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-input">
+        <label for="menu-toggle" class="menu-toggle-label">
+            <span class="hamburguer-icon"></span>
+        </label>
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </div>
   </header>
 
   <main>
-    <h1>Nossos Projetos e Como Ajudar</h1>
+    <h1 class="titulo-principal container">Nossos Projetos e Como Ajudar</h1>
     
-    <section>
+    <section class="secao-projetos container">
       <h2>Projetos Atuais</h2>
       <article>
         <h3>Projeto Acolher</h3>
@@ -37,15 +49,15 @@
       </article>
     </section>
     
-    <section>
+    <section class="secao-voluntario container">
       <h2>Como ser Voluntário</h2>
       <p>
         Mais do que doar seu tempo, ser um voluntário da nossa ONG significa se tornar um agente de mudança. Você terá a oportunidade de usar suas habilidades para empoderar comunidades, fortalecer laços e semear a esperança onde ela mais precisa. Junte-se a nós para construir um futuro digno para todos. Para começar sua jornada, basta preencher nosso formulário de cadastro.
       </p>
-      <a href="cadastro.html">Quero ser voluntário!</a>
+      <a href="cadastro.html" class="cta-button">Quero ser voluntário!</a>
     </section>
 
-    <section>
+    <section class="secao-doar container">
       <h2>Como Doar</h2>
       <p>
         Sua doação é o combustível que nos permite empoderar comunidades e transformar vidas. Cada contribuição se traduz em ferramentas de trabalho, em oportunidades de aprendizado e em esperança para quem mais precisa. Ao doar, você não apenas ajuda, você investe no futuro digno de muitas famílias e se torna parte fundamental da nossa missão.
@@ -55,7 +67,8 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 Minha ONG. Todos os direitos reservados.</p>
+    <p>&copy; 2025 Associação Semente de Empoderamento. Todos os direitos reservados.</p>
   </footer>
+
 </body>
 </html>
