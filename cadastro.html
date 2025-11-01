@@ -1,125 +1,163 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro | Associação Semente de Empoderamento</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Associação Semente de Empoderamento</title>
+    <link rel="stylesheet" href="css/cadastro.css">
 </head>
 <body>
+    
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="projetos.html">Projetos</a></li>
-        <li><a href="cadastro.html">Cadastro</a></li>
-      </ul>
-    </nav>
+    <div class="header-content">
+        <div class="logo">
+            <a href="index.html">Associação Semente de Empoderamento</a>
+        </div>
+        
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-input">
+        <label for="menu-toggle" class="menu-toggle-label">
+            <span class="hamburguer-icon"></span>
+        </label>
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </div>
   </header>
 
-  <main>
-    <h1>Formulário de Cadastro</h1>
-    <p>
-      Bem-vindo! Ao preencher este formulário, você está dando o primeiro passo para se tornar parte de algo maior. Junte-se a nós para empoderar comunidades, fortalecer laços e semear esperança através do seu apoio. Cada dado que você compartilha nos ajuda a conectar você a projetos que transformam vidas.
-    </p>
+    <main class="main-cadastro container">
 
-    <img src="imagens/banner-voluntarios.png" alt="Banner com 2 mãos entrelaçadas e texto sobre voluntariado" style="max-width:100%;height:auto;display:block;margin:0 auto;">
+    <div class="form-header">
+        <h1 class="titulo-principal">Formulário de Cadastro</h1>
+        
+        <p class="form-intro">
+            Bem-vindo! Ao preencher este formulário, você está dando o primeiro passo para se tornar parte de algo maior. Junte-se a nós para empoderar comunidades, fortalecer laços e semear esperança através do seu apoio.
+        </p>
 
-    <form action="#" method="post">
-      <fieldset>
-        <legend>Informações Pessoais</legend>
-        <label for="nome">Nome Completo:</label>
-        <input type="text" id="nome" name="nome" required autocomplete="name">
+        <img src="imagens/banner-voluntarios.png" 
+             alt="Banner com 2 mãos entrelaçadas e texto sobre voluntariado" 
+             class="form-banner">
+    </div>
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required autocomplete="email">
+    <form action="#" method="post" class="form-cadastro">
+        <fieldset>
+            <legend>Informações Pessoais</legend>
 
-        <label for="cpf">CPF:</label>
-        <input
-          type="text"
-          id="cpf"
-          name="cpf"
-          pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"
-          placeholder="000.000.000-00"
-          inputmode="numeric"
-          maxlength="14"
-          required
-          autocomplete="off">
+            <div class="form-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required autocomplete="name">
+            </div>
 
-        <label for="telefone">Telefone:</label>
-        <input
-          type="tel"
-          id="telefone"
-          name="telefone"
-          pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}"
-          placeholder="(00) 90000-0000"
-          inputmode="tel"
-          maxlength="15"
-          required
-          autocomplete="tel">
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+            </div>
+            
+            <div class="form-group">
+                <label for="cpf">CPF:</label>
+                <input
+                    type="text"
+                    id="cpf"
+                    name="cpf"
+                    pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"
+                    placeholder="000.000.000-00"
+                    inputmode="numeric"
+                    maxlength="14"
+                    required
+                    autocomplete="off">
+            </div>
 
-        <label for="data_nascimento">Data de Nascimento:</label>
-        <input type="date" id="data_nascimento" name="data_nascimento" required>
-      </fieldset>
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input
+                    type="tel"
+                    id="telefone"
+                    name="telefone"
+                    pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}"
+                    placeholder="(00) 90000-0000"
+                    inputmode="tel"
+                    maxlength="15"
+                    required
+                    autocomplete="tel">
+            </div>
 
-      <fieldset>
-        <legend>Endereço</legend>
-        <label for="cep">CEP:</label>
-        <input
-          type="text"
-          id="cep"
-          name="cep"
-          pattern="[0-9]{5}-[0-9]{3}"
-          placeholder="00000-000"
-          inputmode="numeric"
-          maxlength="9"
-          required
-          autocomplete="postal-code">
+            <div class="form-group">
+                <label for="data_nascimento">Data de Nascimento:</label>
+                <input type="date" id="data_nascimento" name="data_nascimento" required>
+            </div>
+        </fieldset>
 
-        <label for="endereco">Endereço Completo:</label>
-        <input type="text" id="endereco" name="endereco" required autocomplete="street-address">
+        <fieldset>
+            <legend>Endereço</legend>
+            
+            <div class="form-group">
+                <label for="cep">CEP:</label>
+                <input
+                    type="text"
+                    id="cep"
+                    name="cep"
+                    pattern="[0-9]{5}-[0-9]{3}"
+                    placeholder="00000-000"
+                    inputmode="numeric"
+                    maxlength="9"
+                    required
+                    autocomplete="postal-code">
+            </div>
 
-        <label for="cidade">Cidade:</label>
-        <input type="text" id="cidade" name="cidade" required autocomplete="address-level2">
+            <div class="form-group full-width-field">
+                <label for="endereco">Endereço Completo:</label>
+                <input type="text" id="endereco" name="endereco" required autocomplete="street-address">
+            </div>
 
-        <label for="estado">Estado:</label>
-        <select id="estado" name="estado" required autocomplete="address-level1">
-          <option value="" disabled selected>Selecione seu estado</option>
-          <option value="AC">Acre</option>
-          <option value="AL">Alagoas</option>
-          <option value="AP">Amapá</option>
-          <option value="AM">Amazonas</option>
-          <option value="BA">Bahia</option>
-          <option value="CE">Ceará</option>
-          <option value="DF">Distrito Federal</option>
-          <option value="ES">Espírito Santo</option>
-          <option value="GO">Goiás</option>
-          <option value="MA">Maranhão</option>
-          <option value="MT">Mato Grosso</option>
-          <option value="MS">Mato Grosso do Sul</option>
-          <option value="MG">Minas Gerais</option>
-          <option value="PA">Pará</option>
-          <option value="PB">Paraíba</option>
-          <option value="PR">Paraná</option>
-          <option value="PE">Pernambuco</option>
-          <option value="PI">Piauí</option>
-          <option value="RJ">Rio de Janeiro</option>
-          <option value="RN">Rio Grande do Norte</option>
-          <option value="RS">Rio Grande do Sul</option>
-          <option value="RO">Rondônia</option>
-          <option value="RR">Roraima</option>
-          <option value="SC">Santa Catarina</option>
-          <option value="SP">São Paulo</option>
-          <option value="SE">Sergipe</option>
-          <option value="TO">Tocantins</option>
-        </select>
-      </fieldset>
+            <div class="form-group">
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade" required autocomplete="address-level2">
+            </div>
 
-      <button type="submit">Enviar Cadastro</button>
+            <div class="form-group">
+                <label for="estado">Estado:</label>
+                <select id="estado" name="estado" required autocomplete="address-level1">
+                    <option value="" disabled selected>Selecione seu estado</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <button type="submit" class="form-submit-button">Enviar Cadastro</button>
     </form>
-  </main>
+</main>
 
-  <footer>
-    <p>&copy; 2025 Minha ONG. Todos os direitos reservados.</p>
-  </footer>
+    <footer>
+        <p>&copy; 2025 Associação Semente de Empoderamento. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
