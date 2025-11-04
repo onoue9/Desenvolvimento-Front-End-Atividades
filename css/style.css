@@ -1,0 +1,82 @@
+/* Aqui você pode importar todos os CSS individuais */
+@import url('cadastro.css');
+@import url('projetos.css');
+@import url('home.css'); /* se houver home.css */
+
+/* Reset absoluto de margens/paddings indesejados */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Garante que o fundo do header/footer vá até as bordas */
+.bg-custom, .bg-neutral-dark {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+/* Protege imagens */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Garante fundo branco em toda a página */
+body {
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+  color: var(--color-neutral-dark);
+}
+
+/* Previne scroll horizontal indesejado */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Garante que imagens não estourem */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Remove margin/padding default indesejado */
+.container, .container-fluid {
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+}
+
+/* Garante que o footer não tenha margens/paddings extras do Bootstrap */
+footer {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* style.css */
+.text-primary, .text-primary:hover {
+  color: #28a745 !important; /* verde como exemplo */
+}
+.bg-primary {
+  background-color: #28a745 !important;
+}
+
+/* No seu style.css */
+.navbar-brand {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
