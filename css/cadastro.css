@@ -1,9 +1,4 @@
-/* ====================================================================== */
-/* 1. DESIGN SYSTEM: Variáveis CSS Customizadas (Root) */
-/* ====================================================================== */
-
 :root {
-    /* 1.1. PALETA DE CORES */
     --color-primary: #1E88E5; 
     --color-primary-dark: #1565C0;
     --color-secondary: #FFB300; 
@@ -13,14 +8,12 @@
     --color-neutral-light: #F5F5F5; 
     --color-white: #FFFFFF; 
     
-    /* 1.2. TIPOGRAFIA HIERÁRQUICA */
     --font-size-hero: 3.5rem; 
     --font-size-xl: 2rem; 
     --font-size-lg: 1.5rem; 
     --font-size-md: 1rem; 
     --font-size-sm: 0.875rem; 
 
-    /* 1.3. ESPAÇAMENTO MODULAR */
     --spacing-1x: 8px;
     --spacing-2x: 16px;
     --spacing-3x: 24px;
@@ -28,17 +21,12 @@
     --spacing-6x: 48px;
     --spacing-8x: 64px;
     
-    /* 1.4. OUTRAS VARIÁVEIS */
     --max-width-content: 1200px;
     --border-radius-default: 4px;
     --font-family-default: 'Arial', sans-serif;
     --transition-speed: 0.3s;
 }
 
-
-/* ====================================================================== */
-/* 2. RESET BÁSICO E TIPOGRAFIA GERAL */
-/* ====================================================================== */
 
 * {
     margin: 0;
@@ -99,11 +87,6 @@ p {
     color: var(--color-primary); 
 }
 
-
-/* ====================================================================== */
-/* 3. LAYOUT PRINCIPAL (CSS GRID) e ESTRUTURA GERAL */
-/* ====================================================================== */
-
 /* GRID principal: Header, Main, Footer (Sticky Footer) */
 body {
     min-height: 100vh;
@@ -126,7 +109,6 @@ header {
     position: relative; /* Necessário para o menu mobile */
 }
 
-/* -- MODIFICAÇÃO -- (Removemos o grid/gap global do main) */
 main { 
     grid-area: main; 
     padding: var(--spacing-6x) 0;
@@ -165,12 +147,6 @@ footer p {
     align-items: center; 
 }
 
-
-/* ====================================================================== */
-/* 4. LAYOUT DE CONTEÚDO (ESTILOS DE PÁGINA) */
-/* ====================================================================== */
-
-/* 4.1 Estilos da Página PROJETOS (projetos.html) */
 /* (Mantém os estilos que já fizemos para as outras páginas) */
 .secao-projetos article {
     background-color: var(--color-white);
@@ -240,8 +216,6 @@ footer p {
 }
 
 
-/* 4.2 Estilos da Página CADASTRO (cadastro.html) - (SEÇÃO NOVA) */
-
 /* -- ADIÇÃO -- (Layout da página de cadastro) */
 .main-cadastro {
     /* No mobile, usa flex-direction-column (default) */
@@ -277,7 +251,6 @@ footer p {
     display: block;
 }
 
-/* O formulário em si */
 .form-cadastro {
     background-color: var(--color-neutral-light);
     padding: var(--spacing-4x);
@@ -352,10 +325,66 @@ footer p {
     background-color: var(--color-primary-dark);
 }
 
+.error-message {
+    color: red;
+    font-size: var(--font-size-sm);
+    margin-top: var(--spacing-1x);
+}
 
-/* ====================================================================== */
-/* 5. NAVEGAÇÃO SOFISTICADA: Menu Hambúrguer e Dropdown */
-/* ====================================================================== */
+.mensagem-sucesso {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Toast container */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Toast individual */
+.toast {
+    position: relative;
+    min-width: 250px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 500;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    background-color: rgba(255,255,255); /* fundo opaco */
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Mostrar toast */
+.toast.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Barra de progresso */
+.toast-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background-color: rgba(255,255,255,0.8);
+    width: 100%;
+    transform-origin: left;
+    animation: progressBar linear forwards;
+}
+
+@keyframes progressBar {
+    from { transform: scaleX(1); }
+    to { transform: scaleX(0); }
+}
 
 .menu-toggle-input, 
 .menu-toggle-label {
@@ -379,15 +408,8 @@ footer p {
     border-bottom: 2px solid var(--color-secondary);
 }
 
-
-/* ====================================================================== */
-/* 6. BREAKPOINTS RESPONSIVOS */
-/* ====================================================================== */
-
-/* 6.1. Mobile Padrão (Telas < 1024px) */
 @media (max-width: 1023px) {
     
-    /* 6.1.1. MENU HAMBÚRGUER VISÍVEL */
     .menu-toggle-input {
         position: absolute;
         opacity: 0;
@@ -428,8 +450,6 @@ footer p {
     .menu-toggle-input:checked + .menu-toggle-label .hamburguer-icon::before { top: 0; transform: rotate(0); opacity: 0; }
     .menu-toggle-input:checked + .menu-toggle-label .hamburguer-icon::after { top: 0; transform: rotate(-90deg); }
 
-
-    /* 6.1.2. NAVEGAÇÃO MOBILE (MENU ABERTO/FECHADO) */
     .main-nav {
         position: absolute;
         top: 100%; 
@@ -458,7 +478,6 @@ footer p {
         background-color: var(--color-neutral-light);
     }
 
-    /* 6.1.3. AJUSTES GERAIS DE LAYOUT MOBILE */
     header {
         padding: var(--spacing-3x) var(--spacing-4x);
     }
@@ -476,8 +495,6 @@ footer p {
     }
 }
 
-
-/* 6.2. Tablet Médio (A partir de 768px) */
 @media (min-width: 768px) {
 
     /* Layout da página de PROJETOS em grid */
@@ -513,8 +530,6 @@ footer p {
     }
 }
 
-
-/* 6.3. Desktop (A partir de 1024px) */
 @media (min-width: 1024px) {
     .menu-toggle-label {
         display: none;
@@ -535,10 +550,6 @@ footer p {
     }
 }
 
-
-/* 6.4. Outros Breakpoints (Ajustes de Design) */
-
-/* 6.4.1. Mobile/Tablet (Menor que 600px) */
 @media (max-width: 599px) {
     .titulo-principal {
         font-size: 2rem;
@@ -569,7 +580,6 @@ footer p {
     }
 }
 
-/* 6.4.2. Tablet Pequeno (A partir de 600px) and (max-width: 1023px) */
 @media (min-width: 600px) and (max-width: 1023px) {
     .header-content {
         flex-direction: row; 
@@ -578,7 +588,6 @@ footer p {
     .logo a { font-size: 2rem; }
 }
 
-/* 6.4.3. Desktop Grande (A partir de 1440px) */
 @media (min-width: 1440px) {
     :root {
         --max-width-content: 1400px;
