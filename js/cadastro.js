@@ -1,132 +1,157 @@
 export function cadastroPage() {
     return `
-        <div class="form-header">
-            <h1 class="titulo-principal">Formulário de Cadastro</h1>
-            <p class="form-intro">
-                Bem-vindo! Ao preencher este formulário, você está dando o primeiro passo para se tornar parte de algo maior.
-            </p>
-            <img src="/imagens/banner-voluntarios.png" alt="Banner" class="form-banner">
+    <div class="container py-5">
+        <div class="row g-5">
+            <!-- Coluna esquerda: título, intro e banner -->
+            <div class="col-lg-5">
+                <h1 class="titulo-principal">Formulário de Cadastro</h1>
+                <p class="form-intro">
+                    Bem-vindo! Ao preencher este formulário, você está dando o primeiro passo para se tornar parte de algo maior.
+                </p>
+                <img src="/imagens/banner-voluntarios.png" alt="Banner" class="banner-cadastro mt-4">
+            </div>
+
+            <!-- Coluna direita: formulário -->
+            <div class="col-lg-7">
+                <form id="form-cadastro" class="form-cadastro">
+                    <fieldset>
+                        <legend>Informações Pessoais</legend>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="nome" class="form-label">Nome Completo:</label>
+                                <input type="text" id="nome" name="nome" class="form-control">
+                                <span class="error-message" id="error-nome"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">E-mail:</label>
+                                <input type="email" id="email" name="email" class="form-control">
+                                <span class="error-message" id="error-email"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="cpf" class="form-label">CPF:</label>
+                                <input type="text" id="cpf" name="cpf" class="form-control" placeholder="000.000.000-00" maxlength="14">
+                                <span class="error-message" id="error-cpf"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="telefone" class="form-label">Telefone:</label>
+                                <input type="tel" id="telefone" name="telefone" class="form-control" placeholder="(00) 90000-0000" maxlength="15">
+                                <span class="error-message" id="error-telefone"></span>
+                            </div>
+                            <div class="col-12">
+                                <label for="data_nascimento" class="form-label">Data de Nascimento:</label>
+                                <input type="date" id="data_nascimento" name="data_nascimento" class="form-control">
+                                <span class="error-message" id="error-data"></span>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="mt-4">
+                        <legend>Endereço</legend>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="cep" class="form-label">CEP:</label>
+                                <input type="text" id="cep" name="cep" class="form-control" placeholder="00000-000" maxlength="9">
+                                <span class="error-message" id="error-cep"></span>
+                            </div>
+                            <div class="col-12">
+                                <label for="endereco" class="form-label">Endereço Completo:</label>
+                                <input type="text" id="endereco" name="endereco" class="form-control">
+                                <span class="error-message" id="error-endereco"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="cidade" class="form-label">Cidade:</label>
+                                <input type="text" id="cidade" name="cidade" class="form-control">
+                                <span class="error-message" id="error-cidade"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="estado" class="form-label">Estado:</label>
+                                <select id="estado" name="estado" class="form-select">
+                                    <option value="" disabled selected>Selecione seu estado</option>
+                                    <option value="AC">Acre</option>
+                                    <option value="AL">Alagoas</option>
+                                    <option value="AP">Amapá</option>
+                                    <option value="AM">Amazonas</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="CE">Ceará</option>
+                                    <option value="DF">Distrito Federal</option>
+                                    <option value="ES">Espírito Santo</option>
+                                    <option value="GO">Goiás</option>
+                                    <option value="MA">Maranhão</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="PA">Pará</option>
+                                    <option value="PB">Paraíba</option>
+                                    <option value="PR">Paraná</option>
+                                    <option value="PE">Pernambuco</option>
+                                    <option value="PI">Piauí</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="RN">Rio Grande do Norte</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="RO">Rondônia</option>
+                                    <option value="RR">Roraima</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="SE">Sergipe</option>
+                                    <option value="TO">Tocantins</option>
+                                </select>
+                                <span class="error-message" id="error-estado"></span>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <button type="submit" class="form-submit-button">Enviar Cadastro</button>
+                </form>
+            </div>
         </div>
-
-        <form id="form-cadastro" class="form-cadastro">
-            <fieldset>
-                <legend>Informações Pessoais</legend>
-                <div class="form-group">
-                    <label for="nome">Nome Completo:</label>
-                    <input type="text" id="nome" name="nome" >
-                    <span class="error-message" id="error-nome"></span>
-                </div>
-                <div class="form-group">
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" >
-                    <span class="error-message" id="error-email"></span>
-                </div>
-                <div class="form-group">
-                    <label for="cpf">CPF:</label>
-                    <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" maxlength="14" >
-                    <span class="error-message" id="error-cpf"></span>
-                </div>
-                <div class="form-group">
-                    <label for="telefone">Telefone:</label>
-                    <input type="tel" id="telefone" name="telefone" placeholder="(00) 90000-0000" maxlength="15" >
-                    <span class="error-message" id="error-telefone"></span>
-                </div>
-                <div class="form-group">
-                    <label for="data_nascimento">Data de Nascimento:</label>
-                    <input type="date" id="data_nascimento" name="data_nascimento" >
-                    <span class="error-message" id="error-data"></span>
-                </div>
-            </fieldset>
-
-            <fieldset>
-                <legend>Endereço</legend>
-                <div class="form-group">
-                    <label for="cep">CEP:</label>
-                    <input type="text" id="cep" name="cep" placeholder="00000-000" maxlength="9" >
-                    <span class="error-message" id="error-cep"></span>
-                </div>
-                <div class="form-group full-width-field">
-                    <label for="endereco">Endereço Completo:</label>
-                    <input type="text" id="endereco" name="endereco" >
-                    <span class="error-message" id="error-endereco"></span>
-                </div>
-                <div class="form-group">
-                    <label for="cidade">Cidade:</label>
-                    <input type="text" id="cidade" name="cidade" >
-                    <span class="error-message" id="error-cidade"></span>
-                </div>
-                <div class="form-group">
-                    <label for="estado">Estado:</label>
-                    <select id="estado" name="estado">
-                        <option value="" disabled selected>Selecione seu estado</option>
-                        <option value="AC">Acre</option>
-                        <option value="AL">Alagoas</option>
-                        <option value="AP">Amapá</option>
-                        <option value="AM">Amazonas</option>
-                        <option value="BA">Bahia</option>
-                        <option value="CE">Ceará</option>
-                        <option value="DF">Distrito Federal</option>
-                        <option value="ES">Espírito Santo</option>
-                        <option value="GO">Goiás</option>
-                        <option value="MA">Maranhão</option>
-                        <option value="MT">Mato Grosso</option>
-                        <option value="MS">Mato Grosso do Sul</option>
-                        <option value="MG">Minas Gerais</option>
-                        <option value="PA">Pará</option>
-                        <option value="PB">Paraíba</option>
-                        <option value="PR">Paraná</option>
-                        <option value="PE">Pernambuco</option>
-                        <option value="PI">Piauí</option>
-                        <option value="RJ">Rio de Janeiro</option>
-                        <option value="RN">Rio Grande do Norte</option>
-                        <option value="RS">Rio Grande do Sul</option>
-                        <option value="RO">Rondônia</option>
-                        <option value="RR">Roraima</option>
-                        <option value="SC">Santa Catarina</option>
-                        <option value="SP">São Paulo</option>
-                        <option value="SE">Sergipe</option>
-                        <option value="TO">Tocantins</option>
-                    </select>
-                    <span class="error-message" id="error-estado"></span>
-                </div>
-            </fieldset>
-
-            <button type="submit" class="form-submit-button">Enviar Cadastro</button>
-        </form>
+    </div>
     `;
 }
 
 function showToast(message, type = 'success', duration = 3000) {
-    // Cria container se não existir
-    let container = document.querySelector('.toast-container');
-    if (!container) {
-        container = document.createElement('div');
-        container.className = 'toast-container';
-        document.body.appendChild(container);
+  // Cria container de toast se não existir
+  let toastContainer = document.getElementById('toast-container');
+  if (!toastContainer) {
+    toastContainer = document.createElement('div');
+    toastContainer.id = 'toast-container';
+    toastContainer.className = 'toast-container position-fixed top-0 end-0 p-3';
+    document.body.appendChild(toastContainer);
+  }
+
+  // Define classe de cor (para a barra de progresso)
+  const toastClass = type === 'error' ? 'toast-error' : '';
+
+  // Cria o toast SEM a classe .show
+  const toastEl = document.createElement('div');
+  toastEl.className = `toast ${toastClass}`; // ❌ NÃO coloque .show aqui
+  toastEl.setAttribute('role', 'alert');
+  toastEl.setAttribute('aria-live', 'assertive');
+  toastEl.setAttribute('aria-atomic', 'true');
+
+  toastEl.innerHTML = `
+    <div class="toast-body">
+      ${message}
+      <div class="toast-progress-bar mt-2"></div>
+    </div>
+  `;
+
+  toastContainer.appendChild(toastEl);
+
+  // Inicializa e mostra via API (isso adiciona .show internamente)
+  const bsToast = new bootstrap.Toast(toastEl, {
+    autohide: true,
+    delay: duration
+  });
+
+  bsToast.show(); // ✅ Só aqui o toast é exibido
+
+  // Remove do DOM após o fechamento
+  toastEl.addEventListener('hidden.bs.toast', () => {
+    toastEl.remove();
+    if (toastContainer.children.length === 0) {
+      toastContainer.remove();
     }
-
-    // Cria toast
-    const toast = document.createElement('div');
-    toast.className = `toast ${type}`;
-    toast.innerHTML = `<span style="color: #000;">${message}</span>`; // texto preto
-
-    // Cria barra de progresso
-    const progress = document.createElement('div');
-    progress.className = 'toast-progress';
-    progress.style.backgroundColor = type === 'error' ? '#e74c3c' : '#27ae60'; // vermelho ou verde
-    progress.style.animationDuration = duration + 'ms';
-
-    toast.appendChild(progress);
-    container.appendChild(toast);
-
-    // Mostra toast
-    setTimeout(() => toast.classList.add('show'), 50);
-
-    // Remove toast após duração
-    setTimeout(() => {
-        toast.classList.remove('show');
-        setTimeout(() => container.removeChild(toast), 300); // espera animação de saída
-    }, duration);
+  });
 }
 
 export function maskCPF() {
