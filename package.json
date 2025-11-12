@@ -1,0 +1,29 @@
+{
+  "name": "desenvolvimento-front-end-para-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onoue9/Desenvolvimento-Front-End-Atividades.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onoue9/Desenvolvimento-Front-End-Atividades/issues"
+  },
+  "homepage": "https://github.com/onoue9/Desenvolvimento-Front-End-Atividades#readme",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "glob": "^11.0.3",
+    "html-minifier-terser": "^7.2.0",
+    "imagemin": "^9.0.1",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^10.0.0",
+    "terser": "^5.44.1"
+  }
+}
