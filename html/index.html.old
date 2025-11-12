@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Início | Associação Semente de Empoderamento</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+ <header>
+    <div class="header-content">
+        <div class="logo">
+            <a href="index.html">Associação Semente de Empoderamento</a>
+        </div>
+        
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-input">
+        <label for="menu-toggle" class="menu-toggle-label">
+            <span class="hamburguer-icon"></span>
+        </label>
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </div>
+  </header>
+  <main>
+    <h1 class="titulo-principal container">Associação Semente de Empoderamento</h1>
+    
+    <section class="secao-missao container">
+      <h2>Nossa Missão</h2>
+      <div class="missao-conteudo">
+        <div class="missao-texto">
+          <p>
+            Trabalhamos para empoderar indivíduos e comunidades, oferecendo as ferramentas e o suporte necessários para que possam construir um futuro digno. Nossa missão é criar oportunidades, fortalecer laços e semear a esperança onde ela é mais necessária.
+          </p>
+        </div>
+        <img src="/imagens/banner-index.png" width="2048" height="768" alt="Banner com o nome da ONG...">
+      </div>
+    </section>
+
+    <section class="secao-valores container">
+      <h2>Nossos Valores</h2>
+      <div class="valores-grid">
+        <article class="card-valor">
+          <h3>Transparência</h3>
+          <p>Agimos com total clareza e honestidade em todas as nossas atividades. Para nós, a transparência é a base que fortalece a confiança da nossa comunidade, permitindo que todos saibam como cada passo dado se traduz em empoderamento e esperança.</p>
+        </article>
+        <article class="card-valor">
+          <h3>Inovação</h3>
+          <p>Buscamos soluções criativas e eficazes para os desafios sociais. Acreditamos que a inovação é a ferramenta essencial para criar novas oportunidades e construir um futuro mais promissor e digno para as comunidades que apoiamos.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <section class="secao-contato container">
+      <h2>Contato</h2>
+      <address class="contato-info">
+        <p>Endereço: Rua da Esperança, 123 - Cidade Feliz</p>
+        <p>Telefone: (00) 1234-5678</p>
+        <p>Email: contato@minhaong.org</p>
+      </address>
+    </section>
+    
+    <p class="copyright">&copy; 2025 Associação Semente de Empoderamento. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
