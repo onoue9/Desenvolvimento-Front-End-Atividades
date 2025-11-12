@@ -3,8 +3,8 @@ export function homePage() {
     <div class="container py-5">
         <h1 class="titulo-principal">Associação Semente de Empoderamento</h1>
         
-        <section class="py-5">
-            <h2>Nossa Missão</h2>
+        <section class="py-5" aria-labelledby="missao-titulo">
+            <h2 id="missao-titulo">Nossa Missão</h2>
             <div class="row flex-column flex-lg-row align-items-center g-4 mt-2">
                 <div class="col-lg-6">
                     <p class="lead">
@@ -12,14 +12,14 @@ export function homePage() {
                     </p>
                 </div>
                 <div class="col-lg-6 text-center text-lg-start">
-                    <img src="/imagens/banner-index.png" class="img-fluid banner-missao" alt="Banner com o nome da ONG...">
+                    <img src="/imagens/banner-index.png" class="img-fluid banner-missao" alt="Um homem entregando um alimento a outro homem, simbolizando a ajuda e o apoio oferecidos pela ONG.">'">
                 </div>
             </div>
         </section>
 
-        <section class="py-5 bg-neutral-light">
+        <section class="py-5 bg-neutral-light" aria-labelledby="valores-titulo">
             <div class="container">
-                <h2>Nossos Valores</h2>
+                <h2 id="valores-titulo">Nossos Valores</h2>
                 <div class="row g-4 mt-2">
                     <div class="col-md-6">
                         <div class="card-valor-custom p-4 h-100">
