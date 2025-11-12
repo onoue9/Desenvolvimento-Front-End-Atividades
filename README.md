@@ -84,15 +84,6 @@ Um site institucional acessível e responsivo para uma ONG fictícia, desenvolvi
 
 ---
 
-## 🌐 Deploy
-
-O site está hospedado no GitHub Pages e pode ser acessado em:  
-🔗 https://seu-usuario.github.io/associacao-semente/
-
-> ⚠️ Substitua "seu-usuario" pelo seu nome de usuário do GitHub.
-
----
-
 ## 📜 Licença
 
 Este projeto é de uso acadêmico e educacional.  
