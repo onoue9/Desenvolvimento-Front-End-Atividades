@@ -1,19 +1,19 @@
 # 🌱 Associação Semente de Empoderamento
 
-Um site institucional acessível e responsivo para uma ONG fictícia, desenvolvido como parte de uma atividade acadêmica com foco em **boas práticas de desenvolvimento web**, **acessibilidade (WCAG 2.1 Nível AA)** e **otimização para produção**.
+Um site institucional acessível e responsivo para uma ONG fictícia, desenvolvido como parte de uma atividade acadêmica com foco em boas práticas de desenvolvimento web, acessibilidade (WCAG 2.1 Nível AA) e otimização para produção.
 
-> **"Semear a esperança, colher o empoderamento."**
+> "Semear a esperança, colher o empoderamento."
 
 ---
 
 ## 🎯 Objetivos do Projeto
 
-- Criar um site institucional com três páginas principais: **Home**, **Projetos** e **Cadastro**.
-- Implementar uma **aplicação SPA (Single Page Application)** sem recarga de página.
-- Integrar um **framework frontend** (Bootstrap).
-- Garantir **acessibilidade total** conforme **WCAG 2.1 Nível AA**.
-- Aplicar **minificação de HTML, CSS, JS e compressão de imagens** para produção.
-- Fazer deploy em **GitHub Pages**.
+- Criar um site institucional com três páginas principais: Home, Projetos e Cadastro.
+- Implementar uma aplicação SPA (Single Page Application) sem recarga de página.
+- Integrar um framework frontend (Bootstrap).
+- Garantir acessibilidade total conforme WCAG 2.1 Nível AA.
+- Aplicar minificação de HTML, CSS, JS e compressão de imagens para produção.
+- Fazer deploy em GitHub Pages.
 
 ---
 
@@ -24,10 +24,10 @@ Um site institucional acessível e responsivo para uma ONG fictícia, desenvolvi
 - Estado mantido com JavaScript puro.
 
 ### ✅ Acessibilidade (WCAG 2.1 Nível AA)
-- Estrutura semântica correta (`<header>`, `<main>`, `<section>`, etc.).
+- Estrutura semântica correta (<header>, <main>, <section>, etc.).
 - Navegação 100% por teclado (Tab/Enter).
 - Contraste mínimo de 4.5:1 em todos os textos.
-- Suporte a leitores de tela (ARIA, `aria-live`, foco gerenciado).
+- Suporte a leitores de tela (ARIA, aria-live, foco gerenciado).
 - Modo claro/escuro com alternância manual e respeito às preferências do sistema.
 - Suporte a modo de alto contraste.
 
@@ -37,12 +37,12 @@ Um site institucional acessível e responsivo para uma ONG fictícia, desenvolvi
 
 ### ✅ Otimização para Produção
 - Minificação automática de HTML, CSS e JavaScript.
-- Compressão de imagens (via Squoosh.app ou script automatizado).
-- Pasta de produção (`dist/`) pronta para deploy.
+- Compressão de imagens (feito manualmente com Squoosh.app).
+- Pasta de produção (dist/) pronta para deploy.
 
 ### ✅ Funcionalidades
 - Formulário de cadastro com validação em tempo real.
-- Armazenamento de dados no `localStorage`.
+- Armazenamento de dados no localStorage.
 - Toasts de feedback com suporte a leitores de tela.
 - Alternância entre modo claro e escuro, com preferência salva.
 
@@ -50,23 +50,58 @@ Um site institucional acessível e responsivo para uma ONG fictícia, desenvolvi
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **HTML5** + **CSS3** + **JavaScript (ES6+)**  
-- **Bootstrap 5** (framework CSS/JS para layout e componentes)  
-- **Webpack/Terser/Clean-CSS** (para minificação — via script personalizado)  
-- **GitHub Pages** (hospedagem estática)  
+- HTML5 + CSS3 + JavaScript (ES6+)  
+- Bootstrap 5 (framework CSS/JS para layout e componentes)  
+- html-minifier-terser, clean-css, terser (minificação via script personalizado)  
+- GitHub Pages (hospedagem estática)  
 
-> ✨ Projeto **100% estático** — sem backend. Todos os dados são armazenados no `localStorage` do navegador.
+> ✨ Projeto 100% estático — sem backend. Todos os dados são armazenados no localStorage do navegador.
 
 ---
 
 ## ▶️ Como Executar Localmente
 
 ### Pré-requisitos
-- [Node.js](https://nodejs.org/) (versão 18 ou superior)
+- Node.js (versão 18 ou superior)
 
 ### Passos
 
 1. Clone o repositório:
-   ```bash
    git clone https://github.com/seu-usuario/associacao-semente.git
    cd associacao-semente
+
+2. Instale as dependências de build:
+   npm install
+
+3. Gere a versão otimizada (pasta dist/):
+   node build.mjs
+
+4. Inicie um servidor local para testar:
+   npx serve -s dist
+
+5. Acesse no navegador:  
+   👉 http://localhost:3000
+
+---
+
+## 🌐 Deploy
+
+O site está hospedado no GitHub Pages e pode ser acessado em:  
+🔗 https://seu-usuario.github.io/associacao-semente/
+
+> ⚠️ Substitua "seu-usuario" pelo seu nome de usuário do GitHub.
+
+---
+
+## 📜 Licença
+
+Este projeto é de uso acadêmico e educacional.  
+Desenvolvido por Filipe Lira Onoue Melo.
+
+---
+
+## 💚 Agradecimentos
+
+À Associação Semente de Empoderamento (fictícia), pelo propósito de transformar vidas através da esperança e do empoderamento comunitário.
+
+> Feito com ❤️ e compromisso com a inclusão digital.
